@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-textPrimary antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface border border-border rounded-xl shadow-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primaryHover text-white px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-surfaceHover hover:bg-border text-textPrimary px-4 py-2 rounded-lg font-medium transition-colors border border-border;
+  }
+
+  .nav-link {
+    @apply flex items-center px-4 py-3 text-textSecondary hover:text-textPrimary hover:bg-surfaceHover rounded-lg transition-colors gap-3;
+  }
+  .nav-link.active {
+    @apply text-primary bg-primary/10 font-medium;
+  }
+}
